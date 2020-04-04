@@ -1,0 +1,13 @@
+- hosts: ios
+  gather_facts: false
+
+  tasks:
+    - name: show verion
+      ios_command:
+        commands:
+          - show version
+      register: result_version
+    
+    - name: debug show version
+      debug:
+        msg: "{{ result_version }}"
