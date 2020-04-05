@@ -11,3 +11,7 @@
     - name: debug show version
       debug:
         msg: "{{ result_version }}"
+    
+    - name: debug test
+      debug:
+        var: custom_user
