@@ -2,10 +2,12 @@ all:
   children:
     ios:   # ios グループ
       hosts: # ios グループのホスト
-        ios01:
-          ansible_host: 172.16.1.1  # ホスト変数
-        ios02:
-          ansible_host: 172.16.1.2  # ホスト変数
+        iosao_latest:
+          ansible_host: ios-xe-mgmt-latest.cisco.com
+          ansible_port: 8181
+        iosao:
+          ansible_host: ios-xe-mgmt.cisco.com
+          ansible_port: 8181
       vars: # ios グループ変数
         ansible_network_os: ios
         ansible_connection: network_cli
