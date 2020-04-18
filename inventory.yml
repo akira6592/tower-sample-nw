@@ -1,13 +1,20 @@
-all:
-  children:
-    ios:   # ios グループ
-      hosts: # ios グループのホスト
-        iosao_latest:
-          ansible_host: ios-xe-mgmt-latest.cisco.com
-          ansible_port: 8181
-        iosao:
-          ansible_host: ios-xe-mgmt.cisco.com
-          ansible_port: 8181
-      vars: # ios グループ変数
-        ansible_network_os: ios
-        ansible_connection: network_cli
+---
+plugin: netbox
+api_endpoint: http://localhost:32768
+token: xxx
+group_by:
+  - manufacturers
+
+# all:
+#   children:
+#     ios:   # ios グループ
+#       hosts: # ios グループのホスト
+#         iosao_latest:
+#           ansible_host: ios-xe-mgmt-latest.cisco.com
+#           ansible_port: 8181
+#         iosao:
+#           ansible_host: ios-xe-mgmt.cisco.com
+#           ansible_port: 8181
+#       vars: # ios グループ変数
+#         ansible_network_os: ios
+#         ansible_connection: network_cli
