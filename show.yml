@@ -2,16 +2,21 @@
   gather_facts: false
 
   tasks:
-    - name: show verion
+    - name: show ip route
       ios_command:
         commands:
-          - show version
-      register: result_version
-    
-    - name: debug show version
+          - show ip route
+      register: result_ip_route
+
+    - name: show ip route
       debug:
-        msg: "{{ result_version }}"
+        msg: "{{ result_ip_route.stdout_lines[0] }}"
+
+    - name: gather ios_facts
+      ios_facts:
+        gather_subset: 
+          - "hardware"
     
-    - name: debug test
+    - name: debug ios_facts
       debug:
-        var: custom_user
+        var: ansible_facts.net_version
