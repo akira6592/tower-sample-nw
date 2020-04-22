@@ -1,6 +1,6 @@
 - hosts: ios
   gather_facts: false
-  debug: always
+  debugger: always
 
   tasks:
     - name: debug
