@@ -1,0 +1,13 @@
+- hosts: ios
+  gather_facts: false
+
+  tasks:
+    - name: show ip route
+      ios_command:
+        commands:
+          - show ip route
+      register: result_ip_route
+
+    - name: show ip route
+      debug:
+        msg: "{{ result_ip_route.stdout_lines[0] }}"
