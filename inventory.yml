@@ -1,5 +1,5 @@
 ---
-plugin: netbox
+plugin: netbox.netbox.nb_inventory
 api_endpoint: http://ip172-18-0-47-bru6umlim9m000egipd0-32768.direct.labs.play-with-docker.com
 token: "{{ token }}"
 group_by:
