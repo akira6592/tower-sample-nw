@@ -1,6 +1,9 @@
 - hosts: ios
   gather_facts: false
 
+  collections:
+    - cisco.ios
+    
   tasks:
     - name: show ip route
       ios_command:
