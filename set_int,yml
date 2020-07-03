@@ -1,0 +1,38 @@
+---
+- hosts: rt01
+  gather_facts: false
+
+  tasks:
+    # - name: set route
+    #   ios_static_route:
+    #     prefix: 0.0.0.0
+    #     mask: 0.0.0.0
+    #     next_hop: 192.168.1.1
+
+    - name: no shut  Gi0/3
+      ios_interfaces:
+        config:
+          - name: GigabitEthernet0/3
+            enabled: True
+
+    - name: set ip address
+      ios_l3_interfaces:
+        config:
+          - name: GigabitEthernet0/3
+            ipv4:
+              - address: 10.0.0.1/24
+
+    - name: enalbe ospf
+      ios_config:
+        parents:
+          - router ospf 1
+        lines:
+          - network 10.0.0.0 0.0.0.255 area 0
+      tags:
+        - ospf
+
+    - name: save
+      ios_config:
+        save_when: modified
+      tags:
+        - save
