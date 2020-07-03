@@ -5,8 +5,8 @@
     - cisco.ios
     
   tasks:
-    - name: show ip route
-      ios_command:
+    - name: show ip route cisco.ios.ios_command
+      cisco.ios.ios_command: 
         commands:
           - show ip route
       register: result_ip_route
