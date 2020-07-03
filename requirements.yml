@@ -2,3 +2,4 @@
 collections:
   - netbox.netbox
   - awx.awx
+  - cisco.ios
