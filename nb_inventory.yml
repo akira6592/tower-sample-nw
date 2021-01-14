@@ -1,2 +1,2 @@
-plugin: nb_inventory
+plugin: netbox
 validate_certs: false
