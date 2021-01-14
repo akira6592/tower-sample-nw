@@ -1,1 +1,2 @@
 plugin: nb_inventory
+validate_certs: false
