@@ -8,3 +8,4 @@
         msg: 
           - "{{ tower_user_name }}"
           - "{{ tokens }}"
+          - "{{ tokens[tower_user_name] }}"
