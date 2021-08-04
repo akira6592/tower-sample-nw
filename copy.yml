@@ -15,9 +15,9 @@
 
     - debug:
         var: res_commnad
-    
-    - debug:
-        var: playbook_dir
 
-    - name: ls
-      ansible.builtin.command: "ls ."
+    - name: 
+      ansible.builtin.command: "{{ item }}"
+      loop:
+        - ls .
+        - df -h
