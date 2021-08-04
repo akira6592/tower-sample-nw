@@ -16,5 +16,5 @@
     - debug:
         var: res_commnad
     
-    - dubug:
+    - debug:
         var: playbook_dir
