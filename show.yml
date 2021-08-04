@@ -5,10 +5,7 @@
     - cisco.ios
     
   tasks:
-    - name: acls
-      cisco.ios.ios_acls:
-        state: gathered
-      
+     
     - name: show ip route cisco.ios.ios_command
       ios_command: 
         commands:
