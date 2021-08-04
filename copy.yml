@@ -9,7 +9,7 @@
         content: 'TEST'
         dest: /var/tmp/test.txt
 
-    - name: create text file
+    - name: ls /var/tmp
       ansible.builtin.command: "ls /var/tmp"
       register: res_commnad
 
@@ -18,3 +18,6 @@
     
     - debug:
         var: playbook_dir
+
+    - name: ls
+      ansible.builtin.command: "ls ."
