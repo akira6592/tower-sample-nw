@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: create text file
+      ansible.builtin.copy:
+        content: 'TEST'
+        dest: /var/tmp/test.txt
