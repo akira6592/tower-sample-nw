@@ -8,3 +8,10 @@
       ansible.builtin.copy:
         content: 'TEST'
         dest: /var/tmp/test.txt
+
+    - name: create text file
+      ansible.builtin.command: "ls /var/tmp"
+      register: res_commnad
+
+    - debug:
+        var: res_commnad
