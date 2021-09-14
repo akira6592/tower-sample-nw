@@ -1,7 +1,10 @@
 - hosts: ios
   gather_facts: false
-  
+
+  vars:
+    diff: |-
+      \u001b[0;31m--- before\u001b[0m\n\u001b[0;31m\u001b[0m\u001b[0;32m+++ after\u001b[0m\n\u001b[0;32m\u001b[0m\u001b[0;36m@@ -114,8 +114,8 @@\u001b[0m\n\u001b[0;36m\u001b[0m ip http secure-server\n 
   tasks:
     - name: debug
       debug:
-        msg: "hello"
+        msg: "{{ diff }}"
