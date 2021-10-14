@@ -14,13 +14,13 @@
 
     - name: show ip route
       debug:
-        msg: "{{ result_ip_route.stdout_lines[0] }}"
+        msg: "{{ result_ip_route.stdout[0] }}"
 
-    - name: gather ios_facts
-      ios_facts:
-        gather_subset: 
-          - "hardware"
+#     - name: gather ios_facts
+#       ios_facts:
+#         gather_subset: 
+#           - "hardware"
     
-    - name: debug ios_facts
-      debug:
-        var: ansible_facts.net_version
+#     - name: debug ios_facts
+#       debug:
+#         var: ansible_facts.net_version
