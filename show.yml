@@ -5,9 +5,9 @@
     - cisco.ios
     
   tasks:
-    - name: pause
-      pause:
-        seconds: 60
+#     - name: pause
+#       pause:
+#         seconds: 60
         
     - name: show ip route cisco.ios.ios_command
       ios_command: 
