@@ -1,0 +1,22 @@
+---
+# 親グループできる
+plugin: azure.azcollection.azure_rm
+# (参考) 対象リソースグループ名、デフォルトは all
+include_vm_resource_groups:
+  - all
+  # - ansible_azure
+plain_host_names: true # インベントリ名を仮想マシン名にする
+
+conditional_groups: # (参考) 動的なグループ定義
+  windows: "'WindowsServer' in image.offer"
+
+  # windows: True
+# hostnames:
+#   - name
+# keyed_groups:
+#   - prefix: rg_
+#     key: resource_group
+
+keyed_groups:
+  - prefix: tag
+    key: tags
