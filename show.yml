@@ -14,7 +14,7 @@
 
     - name: show ip route
       debug:
-        msg: "{{ result_ip_route.stdout[0] }}"
+        msg: "{{ result_ip_route.stdout_lines[0] }}"
 
 #     - name: gather ios_facts
 #       ios_facts:
