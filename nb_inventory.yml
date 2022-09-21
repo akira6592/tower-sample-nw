@@ -1,0 +1,10 @@
+---
+plugin: netbox.netbox.nb_inventory
+api_endpoint: https://demo.netbox.dev
+# token: "{{ token }}"
+# fetch_all: false
+# use_extra_vars: true
+query_filters:
+  - site: "{{  site }}"
+racks: false
+# services: false
