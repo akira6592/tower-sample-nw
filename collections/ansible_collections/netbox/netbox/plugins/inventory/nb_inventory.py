@@ -1889,7 +1889,7 @@ class InventoryModule(BaseInventoryPlugin, Constructable, Cacheable):
         #     pass
 
         print("self._vars")
-        pring(self._vars)
+        print(self._vars)
         self.templar.available_variables = self._vars           # TODO: どうするのがいいのかな、どこがいいかな, token への影響ある？
         self.query_filters =  self.templar.template(self.get_option("query_filters"))
         print(self.query_filters) # TODO:
