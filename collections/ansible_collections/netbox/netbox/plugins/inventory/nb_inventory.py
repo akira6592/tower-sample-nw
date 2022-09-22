@@ -1890,6 +1890,8 @@ class InventoryModule(BaseInventoryPlugin, Constructable, Cacheable):
 
         print("self._vars")
         print(self._vars)       # tower だと extra vars がここにはいらないか
+        self._vars = {"site": "dm-utica"}
+        print(self._vars)       # tower だと extra vars がここにはいらないか
         self.templar.available_variables = self._vars           # TODO: どうするのがいいのかな、どこがいいかな, token への影響ある？
         self.query_filters =  self.templar.template(self.get_option("query_filters"))
         print(self.query_filters) # TODO:
