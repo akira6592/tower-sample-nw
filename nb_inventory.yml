@@ -3,7 +3,7 @@ plugin: netbox.netbox.nb_inventory
 api_endpoint: https://demo.netbox.dev
 # token: "{{ token }}"
 # fetch_all: false
-# use_extra_vars: true
+use_extra_vars: true
 query_filters:
   - site: "{{ lookup('env', 'site') }}"
 racks: false
