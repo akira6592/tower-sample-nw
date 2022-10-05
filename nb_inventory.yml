@@ -1,5 +1,5 @@
 ---
 plugin: netbox.netbox.nb_inventory
-# api_endpoint: https://demo.netbox.dev
+api_endpoint: https://demo.netbox.dev
 query_filters:
-  - site: dm-buffalo
+  - site: "{{ site }}"
