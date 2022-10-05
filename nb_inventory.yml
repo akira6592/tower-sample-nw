@@ -1,4 +1,5 @@
 ---
 plugin: netbox.netbox.nb_inventory
-query_filters:
-  - site: dm-buffalo
+api_endpoint: https://demo.netbox.dev
+# query_filters:
+#   - site: dm-buffalo
