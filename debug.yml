@@ -4,10 +4,4 @@
   tasks:
     - name: debug
       debug:
-        msg: hell0
-    - name: pause
-      pause:
-        seconds: 60
-      
-      
-        
+        msg: hello
