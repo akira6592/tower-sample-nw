@@ -1,4 +1,4 @@
 ---
 plugin: netbox.netbox.nb_inventory
 query_filters:
-  - site: "{{ site }}"
+  - site: dm-buffalo
