@@ -1,6 +1,0 @@
----
-collections:
-  # netbox.netbox
-  - name: https://github.com/netbox-community/ansible_modules.git
-    type: git
-    version: devel
