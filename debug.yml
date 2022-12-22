@@ -5,3 +5,6 @@
     - name: debug
       debug:
         msg: hello
+    - name: pause
+      pause:
+        seconds: 120
