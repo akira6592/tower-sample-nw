@@ -1,0 +1,9 @@
+---
+- name: Test Play
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Debug Test
+      ansible.builtin.debug:
+        msg: "{{ inventory_hostname }}"
