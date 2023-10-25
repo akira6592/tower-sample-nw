@@ -1,2 +1,2 @@
 #!/bin/bash
-cat ./cat.json
+cat inventory/cat.json
