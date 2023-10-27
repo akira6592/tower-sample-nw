@@ -7,7 +7,7 @@
         "children": ["group002"]
     },
     "group002": {
-        "hosts": ["host003", "host004"],
+        "hosts": ["host003"],
         "vars": {
             "var2": 500
         },
