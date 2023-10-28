@@ -7,4 +7,4 @@
   tasks:
     - name: Debug Test
       ansible.builtin.debug:
-        msg: "{{ inventory_hostname }}"
+        msg: "{{ hostvars[inventory_hostname] }}"
