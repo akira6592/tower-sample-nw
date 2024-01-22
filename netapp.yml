@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  gather_facts: false
+  name: Connectivity Test & Display ONTAP Info
+
+  tasks:
+    - name: Collect ONTAP Info
+      netapp.ontap.na_ontap_rest_info:
+        hostname: localhost
+        username: admin
+        password: password
+        validate_certs: false
+        gather_subsets: “svm/svms”
+      register: ontap_info
