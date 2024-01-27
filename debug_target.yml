@@ -1,0 +1,7 @@
+- hosts: sv
+  gather_facts: false
+
+  tasks:
+    - name: debug
+      debug:
+        msg: "{{ msg }}"
