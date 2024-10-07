@@ -2,6 +2,14 @@
   gather_facts: false
 
   tasks:
-    - name: debug
+    - name: debug 1
       debug:
         msg: "{{ msg }}"
+      tags:
+        - d1
+
+    - name: debug 2
+      debug:
+        msg: "{{ msg }}"
+      tags:
+        - d2
