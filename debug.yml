@@ -4,12 +4,12 @@
   tasks:
     - name: debug 1
       debug:
-        msg: "{{ msg }}"
+        msg: hello 1
       tags:
         - d1
 
     - name: debug 2
       debug:
-        msg: "{{ msg }}"
+        msg: hello 2
       tags:
         - d2
