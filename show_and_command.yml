@@ -20,4 +20,6 @@
     - name: command
       command: 
         cmd: id
+    - debug:
+        mgs: "{{ hostvars[inventory_hostname] }}"
 
