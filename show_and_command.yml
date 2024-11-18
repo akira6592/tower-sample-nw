@@ -17,9 +17,9 @@
   gather_facts: false
     
   tasks:
-    - name: command
-      command: 
-        cmd: id
     - debug:
         msg: "{{ hostvars[inventory_hostname] }}"
 
+    - name: command
+      command: 
+        cmd: id
