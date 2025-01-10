@@ -1,0 +1,5 @@
+---
+collections:
+  - name: netbox.netbox
+    version: 3.18.0
+  
