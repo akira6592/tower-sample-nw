@@ -1,2 +1,3 @@
 ---
 plugin: netbox.netbox.nb_inventory
+api_endpoint: https://demo.netbox.dev
