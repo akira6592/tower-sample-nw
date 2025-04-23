@@ -4,7 +4,7 @@
   tasks:
     - name: debug 1
       debug:
-        msg: hello 1
+        msg: hello 1-2
       tags:
         - d1
 
