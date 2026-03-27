@@ -1,0 +1,9 @@
+- hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: debug 1
+      fail:
+        msg: "This is a failure message for debug 1"
+      when:
+        - inventory_hostname == "host02"
